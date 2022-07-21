@@ -5,9 +5,9 @@
     <classes>
       <class name="Test_scenarios.TestSearchMethod">
         <methods>
+          <include name="logintoFacebook"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="search"/>
         </methods>
       </class> <!-- Test_scenarios.TestSearchMethod -->
     </classes>
