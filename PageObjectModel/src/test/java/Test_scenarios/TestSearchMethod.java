@@ -9,12 +9,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import objects.Facebookpage;
 import objects.GoogleSearchpage;
 
 public class TestSearchMethod {
 
 	WebDriver driver;
-	GoogleSearchpage objectRepo;
+	GoogleSearchpage objectGoogle;
+	Facebookpage objectFacebook;
 	
 	@SuppressWarnings("deprecation")
 	@BeforeTest
@@ -26,18 +28,26 @@ public class TestSearchMethod {
 		
 	}
 	
-	@Test
+	@Test(priority = 0)
 	public void search() {
-		objectRepo = new GoogleSearchpage(driver);
-		objectRepo.searchGoogle("facebook");
+		objectGoogle = new GoogleSearchpage(driver);
+		objectGoogle.searchGoogle("facebook");
 	}
 	
-	@Test
-	public void verifyFacebookLink() {
-		objectRepo = new GoogleSearchpage(driver);
-		objectRepo.clickOnFacebook();
+	@Test(priority = 1)
+	public void verifyFacebookLink()  {
+		objectGoogle = new GoogleSearchpage(driver);
+		objectGoogle.clickOnFacebook();
+	
 	}
 	
+	@Test(priority = 2)
+	public void logintoFacebook() {
+		objectFacebook =new Facebookpage(driver);
+		objectFacebook.enterUsername();
+		objectFacebook.enterPassword();
+		objectFacebook.clickOnLoginBtn();
+	}
 	@AfterTest
 	public void afterTest() {
 		driver.close();
