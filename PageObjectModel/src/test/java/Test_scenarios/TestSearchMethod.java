@@ -42,12 +42,15 @@ public class TestSearchMethod {
 	}
 	
 	@Test(priority = 2)
-	public void logintoFacebook() {
+	public void logintoFacebook()  {
 		objectFacebook =new Facebookpage(driver);
 		objectFacebook.enterUsername();
 		objectFacebook.enterPassword();
 		objectFacebook.clickOnLoginBtn();
+	
 	}
+	
+
 	@AfterTest
 	public void afterTest() {
 		driver.close();
