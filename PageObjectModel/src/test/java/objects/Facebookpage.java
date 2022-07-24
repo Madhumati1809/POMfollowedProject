@@ -30,7 +30,7 @@ public class Facebookpage {
 		username.sendKeys("swamimadhumati@gmail.com");
 	}
 	public void enterPassword() {
-		password.sendKeys("Tatudi@123");
+		password.sendKeys("");
 	}
 
 
