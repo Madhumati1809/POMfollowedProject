@@ -2,11 +2,13 @@ package objects;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -36,11 +38,13 @@ public class Facebookpage {
 
 	@SuppressWarnings("deprecation")
 	public void clickOnLoginBtn() {
+		
+		
+		System.out.println();
 		login_btn.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String title = driver.getTitle();
 		System.out.println(title);
-
 		assertEquals(title, "Facebook – log in or sign up");
 	}
 }
