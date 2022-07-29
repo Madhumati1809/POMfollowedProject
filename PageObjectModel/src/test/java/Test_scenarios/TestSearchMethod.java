@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import objects.Facebookpage;
 import objects.GoogleSearchpage;
 
-@Listeners(objects.ListenersClassInfo.class)
+
 
 public class TestSearchMethod {
 

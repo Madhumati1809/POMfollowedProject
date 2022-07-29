@@ -9,6 +9,7 @@ public class ListenersClassInfo implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		
 		System.out.println("test fails");
+		
 	}
 
 }
